@@ -1,0 +1,8 @@
+[user]
+	email = heriskent@gmail.com
+	name = whitel
+[alias]
+	la = log --oneline --graph --decorate --all
+	st = status
+[core]
+	editor = vim
