@@ -120,7 +120,7 @@ nnoremap <Leader>x 	:TagbarToggle<CR>
 " nnoremap <leader>z 	:NERDTreeToggle<CR>
 " nnoremap <leader>c 	:Leaderf function --nowrap<CR>
 nnoremap <leader>c 	:LeaderfBufTag<CR>
-nnoremap <leader>v 	:LeaderfBufTagAll<CR>
+" nnoremap <leader>v 	:LeaderfBufTagAll<CR>
 
 nnoremap <C-L> 20zl
 nnoremap <C-H> 20zh
@@ -141,7 +141,7 @@ let mapleader=','
 nnoremap Q <C-w>W
 nnoremap W <C-w>w
 nnoremap <leader>c <C-w>c
-nnoremap <leader><C-f> <C-w>v<C-]>zz
+nnoremap <C-f> <C-w>v<C-]>zz
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
