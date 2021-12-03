@@ -67,6 +67,24 @@ let g:tagbar_type_cpp = {
 \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
+let mapleader=' '
+nmap <Leader>fl :NERDTreeToggle<CR>
+" 设置NERDTree子窗口宽度
+let NERDTreeWinSize=32
+" 设置NERDTree子窗口位置
+let NERDTreeWinPos="left"
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应 buffer
+let NERDTreeAutoDeleteBuffer=1
+unlet mapleader
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Variables
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nu
@@ -95,9 +113,12 @@ set splitright
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader=' '
-nnoremap <leader>z 	:NERDTreeToggle<CR>
+nnoremap <leader><C-f> 		:GoDef<CR>
 nnoremap <Leader>x 	:TagbarToggle<CR> 
+" nnoremap <leader>z 	:NERDTreeToggle<CR>
+" nnoremap <leader>c 	:Leaderf function --nowrap<CR>
 nnoremap <leader>c 	:LeaderfBufTag<CR>
+nnoremap <leader>v 	:LeaderfBufTagAll<CR>
 
 nnoremap <C-L> 20zl
 nnoremap <C-H> 20zh
@@ -105,24 +126,14 @@ nnoremap <C-H> 20zh
 nnoremap <leader>J J
 
 let g:go_doc_keywordprg_enabled = 0
-
-" Operate tab
-nnoremap <leader><C-w> :tabclose<CR>
-nnoremap tc :tabclose<CR>
-nnoremap tn :tabnew 
-nnoremap th :tab help 
-autocmd FileType help  setlocal number
 nnoremap J gT
 nnoremap K gt
-nnoremap <C-f> <C-w>v <c-]>
+nnoremap <leader><C-w> :tabclose<CR>
 
-" Operate split window
-let mapleader=';'
 nnoremap Q <C-w>W
 nnoremap W <C-w>w
-nnoremap <leader>n :vsplit 
-nnoremap <leader>c <C-w>c
-nnoremap <leader>m <C-w>\|
-nnoremap <leader>l <C-w>=
-nnoremap <leader><C-f> <C-w><C-]><C-w>T
+
+nnoremap tc :tabclose<CR>
+nnoremap tn :tabnew 
+nnoremap ts :vsplit 
 
