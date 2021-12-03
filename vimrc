@@ -108,6 +108,8 @@ set nowrap
 set incsearch
 set splitright
 
+let g:go_doc_keywordprg_enabled = 0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -125,15 +127,35 @@ nnoremap <C-H> 20zh
 
 nnoremap <leader>J J
 
-let g:go_doc_keywordprg_enabled = 0
-nnoremap J gT
-nnoremap K gt
-nnoremap <leader><C-w> :tabclose<CR>
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+inoremap <C-h> <left>
+inoremap <C-l> <right>
 
+unlet mapleader
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => window
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=','
 nnoremap Q <C-w>W
 nnoremap W <C-w>w
+nnoremap <leader>c <C-w>c
+nnoremap <leader><C-f> <C-w>v<C-]>zz
+unlet mapleader
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => tab
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=' '
+nnoremap J gT
+nnoremap K gt
 nnoremap tc :tabclose<CR>
+nnoremap <leader><C-w> :tabclose<CR>
 nnoremap tn :tabnew 
 nnoremap ts :vsplit 
+autocmd FileType help  setlocal number
+nnoremap th :tab help 
+nnoremap <leader><C-f> <C-w>v<C-]><C-w>Tzz
+unlet mapleader
 
