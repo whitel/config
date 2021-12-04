@@ -180,3 +180,8 @@ export LANGUAGE=en_US:en
 export LC_ALL=en_US.UTF-8
 
 alias getconfig='git clone ssh://conductor@computer:10022/home/conductor/config'
+
+alias tl='tmux ls'
+alias te='tmux attach -t '
+alias tn='tmux new -s '
+alias td='tmux kill-session -t '
