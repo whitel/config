@@ -107,8 +107,11 @@ set nofoldenable
 set nowrap
 set incsearch
 set splitright
+set tags=tags;/
 
 let g:go_doc_keywordprg_enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
@@ -140,8 +143,11 @@ unlet mapleader
 let mapleader=','
 nnoremap Q <C-w>W
 nnoremap W <C-w>w
+nnoremap <leader>n :vsplit 
 nnoremap <leader>c <C-w>c
 nnoremap <C-f> <C-w>v<C-]>zz
+nnoremap <leader>m <C-w>\|
+nnoremap <leader>l <C-w>=
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
