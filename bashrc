@@ -161,7 +161,6 @@ alias dps='docker ps -a'
 alias dp='docker ps'
 alias dis='docker images'
 alias dr='docker run -dit '
-alias gp='git push'
 
 alias mit='de mit'
 alias labs='de labs'
