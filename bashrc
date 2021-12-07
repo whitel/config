@@ -188,3 +188,4 @@ alias td='tmux kill-session -t '
 
 alias sl='ls'
 alias dc='cd'
+alias gst='git st'
