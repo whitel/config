@@ -116,17 +116,38 @@ alias p='ssh -f -N -C -D localhost:8000 conductor@computer -p 10022'
 ##############################################
 # => Git Commands
 ##############################################
-alias ga='git add *'
-alias gm='git commit -m "update"'
-alias gp='git push'
+
+# git status
 alias gs='git status'
+alias gss='git status -s'
+
+# git add
+alias ga='git add '
+alias gaa='git add --all'
+
+# git commit
+alias gm='git commit -v'
+alias gam='git commit -a'
+
+# git pull/push
+alias gp='git push'
+
+# git branch
+alias gb='git branch'
+alias gba='git branch -a'
+
+# git log
 alias gl='git log --oneline --graph --decorate'
-alias gall='ga && gm && gp'
+
+# git diff
 function gitdiff() {
     file_1=$1
     file_2=$2
     git diff --no-index ${file_1} ${file_2}
 }
+alias diff=gitdiff
+
+# git others
 alias gc='git clean -xdf'
 
 ##############################################
@@ -140,7 +161,7 @@ alias dps='docker ps -a'
 alias dp='docker ps'
 alias dis='docker images'
 alias dr='docker run -dit '
-
+alias gp='git push'
 
 ##############################################
 # => Common Commands
@@ -188,7 +209,3 @@ alias td='tmux kill-session -t '
 
 alias sl='ls'
 alias dc='cd'
-alias gst='git st'
-
-alias gam='git commit -a'
-alias gp='git push'
