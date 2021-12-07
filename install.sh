@@ -22,7 +22,7 @@ if [[ $option == "" ]]; then
 	ln -s ~/config/vimrc ~/.vimrc
 	ln -s ~/config/bashrc ~/.bashrc
 	ln -s ~/config/gitconfig ~/.gitconfig
-	ln -s ~/config/sshconfig ~/.ssh/config
+	cp ~/config/sshconfig ~/.ssh/config
 else
 	echo "[x] unknown command" \"$option\"
 	echo ""
