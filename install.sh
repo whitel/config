@@ -14,7 +14,13 @@ if [[ $option == "" ]]; then
 		mv ~/.gitconfig ~/.gitconfig.backup
 	fi
 	if [[ -f ~/.ssh/config ]]; then
-		mv ~/.ssh/config ~/.ssh/.config
+		mv ~/.ssh/config ~/.ssh/.config.backup
+	fi
+	if [[ -f ~/.zshrc ]]; then
+		mv ~/.zshrc ~/.zshrc.backup
+	fi
+	if [[ -f ~/.shell_local ]]; then
+		mv ~/.shell_local ~/.shell_local.backup
 	fi
 	echo "[v] Original files were moved to ~/.*.backup"
 
@@ -23,8 +29,8 @@ if [[ $option == "" ]]; then
 	ln -s ~/config/bashrc ~/.bashrc
 	ln -s ~/config/gitconfig ~/.gitconfig
 	cp ~/config/sshconfig ~/.ssh/config
-elif [[ $option == "zsh" ]]; then
-	echo "pass"
+	ln -s ~/config/shell_local ~/.shell_local
+	ln -s ~/config/zshrc ~/.zshrc
 else
 	echo "[x] unknown command" \"$option\"
 	echo ""
