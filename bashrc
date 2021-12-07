@@ -137,6 +137,12 @@ alias gba='git branch -a'
 alias gd='git diff'
 alias gds='git diff --staged'
 
+# git push
+alias gps='git push'
+
+# git pull
+alias gpl='git pull'
+
 # git others
 alias gclean='git clean -xdf'
 
