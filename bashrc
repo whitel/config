@@ -124,9 +124,6 @@ alias gaa='git add --all'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 
-# git diff
-alias gd='git diff'
-
 # git log
 alias gl='git log'
 alias gla='git la'
