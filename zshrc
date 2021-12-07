@@ -1,3 +1,7 @@
+if [[ -f ~/.shell_local ]]; then
+	source ~/.shell_local
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -109,106 +113,3 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-##############################################
-# => SSH Commands
-##############################################
-alias sshcomputer='ssh computer'
-alias sshdell='ssh dell@dell -p2222'
-alias sshnode9='ssh root@node9 -p2235'
-
-##############################################
-# => Git Commands
-##############################################
-
-# git status
-alias gs='git status'
-alias gss='git status -s'
-
-# git add
-alias ga='git add '
-alias gaa='git add --all'
-
-# git commit
-alias gc='git commit -v'
-alias gca='git commit -v -a'
-
-# git log
-alias gl='git log'
-alias gla='git la'
-alias gls='git log --stat'
-
-# git branch
-alias gb='git branch'
-alias gba='git branch -a'
-
-# git diff
-alias gd='git diff'
-alias gds='git diff --staged'
-
-# git push
-alias gps='git push'
-
-# git pull
-alias gpl='git pull'
-
-# git others
-alias gclean='git clean -xdf'
-
-##############################################
-# => Docker commands
-##############################################
-function de() {
-    container=$1
-	docker exec -it ${container} bash
-}
-alias dps='docker ps -a'
-alias dp='docker ps'
-alias dis='docker images'
-alias dr='docker run -dit '
-
-alias mit='de mit'
-alias labs='de labs'
-
-##############################################
-# => tmux Commands
-##############################################
-alias tl='tmux ls'
-alias te='tmux attach -t '
-alias tn='tmux new -s '
-alias td='tmux kill-session -t '
-
-##############################################
-# => Common Commands
-##############################################
-function geo() {
-    ip=$1
-    curl https://freegeoip.app/json/${ip} -s | jq ".city,.country_name"
-    # https://tools.keycdn.com/geo?host=223.72.105.28
-}
-
-alias cf="df -h | head -1 && df -h | grep mapper"
-
-alias t1='tree -L 1'
-alias t2='tree -L 2'
-alias t3='tree -L 3'
-
-# make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'
-alias mklist="make -qp | awk -F':' '/^[a-zA-Z0-9][^\$#\/\t=]*:([^=]|\$)/ {split(\$1,A,/ /);for(i in A)print A[i]}'"
-
-export PATH=$PATH:/usr/local/go/bin
-
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US:en
-export LC_ALL=en_US.UTF-8
-
-alias sl='ls'
-alias dc='cd'
-
-function gitdiff() {
-    file_1=$1
-    file_2=$2
-    git diff --no-index ${file_1} ${file_2}
-}
-alias diff=gitdiff
