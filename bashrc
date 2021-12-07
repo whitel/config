@@ -122,7 +122,7 @@ alias gaa='git add --all'
 
 # git commit
 alias gc='git commit -v'
-alias gca='git commit -a'
+alias gca='git commit -v -a'
 
 # git diff
 alias gd='git diff'
