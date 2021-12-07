@@ -185,3 +185,6 @@ alias tl='tmux ls'
 alias te='tmux attach -t '
 alias tn='tmux new -s '
 alias td='tmux kill-session -t '
+
+alias sl='ls'
+alias dc='cd'
