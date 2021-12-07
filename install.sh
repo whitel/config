@@ -16,9 +16,9 @@ if [[ $option == "" ]]; then
 	echo "[v] Original files were moved to ~/.*.backup"
 
 	echo "[v] Installing .vimrc .bashrc .gitconfig..."
-	cp vimrc ~/.vimrc
-	cp bashrc ~/.bashrc
-	cp gitconfig ~/.gitconfig
+	ln -s ~/config/vimrc ~/.vimrc
+	ln -s ~/config/bashrc ~/.bashrc
+	ln -s ~/config/gitconfig ~/.gitconfig
 else
 	echo "[x] unknown command" \"$option\"
 	echo ""
