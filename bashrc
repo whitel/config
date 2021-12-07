@@ -108,9 +108,6 @@ fi
 alias sshcomputer='ssh computer'
 alias sshdell='ssh dell@dell -p2222'
 alias sshnode9='ssh root@node9 -p2235'
-alias sshkali='ssh root@192.168.200.132'
-alias sk=sshkali
-alias p='ssh -f -N -C -D localhost:8000 conductor@computer -p 10022'
 
 ##############################################
 # => Git Commands
@@ -176,12 +173,6 @@ alias td='tmux kill-session -t '
 ##############################################
 # => Common Commands
 ##############################################
-export chome='/mnt/c/Users/Whitel'
-
-function GetFunctions() {
-    cat $1 | grep "^func "
-}
-
 function geo() {
     ip=$1
     curl https://freegeoip.app/json/${ip} -s | jq ".city,.country_name"
