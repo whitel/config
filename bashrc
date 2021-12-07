@@ -101,17 +101,12 @@ fi
 ##############################################
 # => SSH Commands
 ##############################################
-alias sshm='ssh btc@node13 -p 50000'
-alias ssht='ssh btc@node13 -p 50001'
-alias sshfabric='ssh fabricuser@node13 -p50010'
 alias sshcomputer='ssh computer'
 alias sshdell='ssh dell@dell -p2222'
 alias sshnode9='ssh root@node9 -p2235'
-alias mit='de mit'
 alias sshkali='ssh root@192.168.200.132'
 alias sk=sshkali
 alias p='ssh -f -N -C -D localhost:8000 conductor@computer -p 10022'
-
 
 ##############################################
 # => Git Commands
@@ -126,29 +121,27 @@ alias ga='git add '
 alias gaa='git add --all'
 
 # git commit
-alias gm='git commit -v'
-alias gam='git commit -a'
+alias gc='git commit -v'
+alias gca='git commit -a'
 
-# git pull/push
-alias gp='git push'
+# git diff
+alias gd='git diff'
+
+# git log
+alias gl='git log'
+alias gla='git la'
+alias gls='git log --stat'
 
 # git branch
 alias gb='git branch'
 alias gba='git branch -a'
 
-# git log
-alias gl='git log --oneline --graph --decorate'
-
 # git diff
-function gitdiff() {
-    file_1=$1
-    file_2=$2
-    git diff --no-index ${file_1} ${file_2}
-}
-alias diff=gitdiff
+alias gd='git diff'
+alias gds='git diff --staged'
 
 # git others
-alias gc='git clean -xdf'
+alias gclean='git clean -xdf'
 
 ##############################################
 # => Docker commands
@@ -163,19 +156,25 @@ alias dis='docker images'
 alias dr='docker run -dit '
 alias gp='git push'
 
+alias mit='de mit'
+alias labs='de labs'
+
+##############################################
+# => tmux Commands
+##############################################
+alias tl='tmux ls'
+alias te='tmux attach -t '
+alias tn='tmux new -s '
+alias td='tmux kill-session -t '
+
 ##############################################
 # => Common Commands
 ##############################################
 export chome='/mnt/c/Users/Whitel'
 
-alias n="cat -n"
-alias s="awk -F ':' '{print \$2}' | sort | uniq"
-alias funs="GetFunctions"
 function GetFunctions() {
     cat $1 | grep "^func "
 }
-
-alias cf="df -h | head -1 && df -h | grep mapper"
 
 function geo() {
     ip=$1
@@ -183,16 +182,14 @@ function geo() {
     # https://tools.keycdn.com/geo?host=223.72.105.28
 }
 
+alias cf="df -h | head -1 && df -h | grep mapper"
+
 alias t1='tree -L 1'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
 
-# export HISTTIMEFORMAT="%F %T "
-
-# alias mklist="make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'"
+# make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'
 alias mklist="make -qp | awk -F':' '/^[a-zA-Z0-9][^\$#\/\t=]*:([^=]|\$)/ {split(\$1,A,/ /);for(i in A)print A[i]}'"
-
-cd
 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -200,12 +197,12 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en
 export LC_ALL=en_US.UTF-8
 
-alias getconfig='git clone ssh://conductor@computer:10022/home/conductor/config'
-
-alias tl='tmux ls'
-alias te='tmux attach -t '
-alias tn='tmux new -s '
-alias td='tmux kill-session -t '
-
 alias sl='ls'
 alias dc='cd'
+
+function gitdiff() {
+    file_1=$1
+    file_2=$2
+    git diff --no-index ${file_1} ${file_2}
+}
+alias diff=gitdiff
