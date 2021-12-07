@@ -104,7 +104,7 @@ fi
 alias sshm='ssh btc@node13 -p 50000'
 alias ssht='ssh btc@node13 -p 50001'
 alias sshfabric='ssh fabricuser@node13 -p50010'
-alias sshcomputer='ssh conductor@computer -p10022'
+alias sshcomputer='ssh computer'
 alias sshdell='ssh dell@dell -p2222'
 alias sshnode9='ssh root@node9 -p2235'
 alias mit='de mit'
