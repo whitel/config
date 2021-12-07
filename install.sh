@@ -23,6 +23,8 @@ if [[ $option == "" ]]; then
 	ln -s ~/config/bashrc ~/.bashrc
 	ln -s ~/config/gitconfig ~/.gitconfig
 	cp ~/config/sshconfig ~/.ssh/config
+elif [[ $option == "zsh" ]]; then
+	echo "pass"
 else
 	echo "[x] unknown command" \"$option\"
 	echo ""
