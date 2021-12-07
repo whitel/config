@@ -191,3 +191,4 @@ alias dc='cd'
 alias gst='git st'
 
 alias gam='git commit -a'
+alias gp='git push'
