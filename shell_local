@@ -25,10 +25,11 @@ alias gca='git commit -v -a'
 alias gl='git log'
 alias gla='git la'
 alias gls='git log --stat'
+alias gls1='git --no-pager log --stat -1'
 
 # git branch
-alias gb='git branch'
-alias gba='git branch -a'
+alias gb='git --no-pager branch'
+alias gba='git --no-pager branch -a'
 
 # git diff
 alias gd='git diff'
