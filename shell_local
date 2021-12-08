@@ -63,9 +63,9 @@ alias labs='de labs'
 # => tmux Commands
 ##############################################
 alias tl='tmux ls'
-alias te='tmux attach -t '
-alias tn='tmux new -s '
-alias td='tmux kill-session -t '
+alias te='tmux attach-session -t'
+alias tn='tmux new -s'
+alias td='tmux kill-session -t'
 
 ##############################################
 # => Common Commands
