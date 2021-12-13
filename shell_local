@@ -25,7 +25,7 @@ alias gca='git commit -v -a'
 alias gl='git log'
 alias gla='git la'
 alias gls='git log --stat'
-alias gls1='git --no-pager log --stat -1'
+alias glsn='git --no-pager log --stat'
 
 # git branch
 alias gb='git --no-pager branch'
@@ -35,14 +35,9 @@ alias gba='git --no-pager branch -a'
 alias gd='git diff'
 alias gds='git diff --staged'
 
-# git push
-alias gps='git push'
-
-# git pull
-alias gpl='git pull'
-
 # git others
 alias gclean='git clean -xdf'
+alias gr='git remote -v'
 
 ##############################################
 # => Docker commands
@@ -63,9 +58,9 @@ alias labs='de labs'
 # => tmux Commands
 ##############################################
 alias tl='tmux ls'
-alias te='tmux attach -t '
-alias tn='tmux new -s '
-alias td='tmux kill-session -t '
+alias te='tmux attach-session -t'
+alias tn='tmux new -s'
+alias td='tmux kill-session -t'
 
 ##############################################
 # => Common Commands
