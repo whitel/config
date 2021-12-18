@@ -55,12 +55,26 @@ alias mit='de mit'
 alias labs='de labs'
 
 ##############################################
-# => tmux Commands
+# => Tmux Commands
 ##############################################
 alias tl='tmux ls'
 alias te='tmux attach-session -t'
 alias tn='tmux new -s'
 alias td='tmux kill-session -t'
+
+##############################################
+# => Proxy Commands
+##############################################
+PROXY_SERVER=172.17.0.4:7891
+function setproxy() {
+	export all_proxy=socks5://${PROXY_SERVER}/
+	export no_proxy=localhost,127.0.0.0,127.0.1.1,127.0.1.1,local.home,10.0.0.0/8
+}
+
+function unsetproxy() {
+	export all_proxy=
+	export no_proxy=
+}
 
 ##############################################
 # => Common Commands
