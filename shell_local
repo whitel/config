@@ -65,8 +65,8 @@ alias td='tmux kill-session -t'
 ##############################################
 # => Proxy Commands
 ##############################################
-PROXY_SERVER=172.17.0.4:7891
 function setproxy() {
+    PROXY_SERVER=172.17.0.4:7891
 	export all_proxy=socks5://${PROXY_SERVER}/
 	export no_proxy=localhost,127.0.0.0,127.0.1.1,127.0.1.1,local.home,10.0.0.0/8
 }
