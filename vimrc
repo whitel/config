@@ -130,6 +130,9 @@ let g:go_doc_keywordprg_enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
+let g:gutentags_add_default_project_roots = 0
+let g:gutentags_project_root = ['.root_project']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
