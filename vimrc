@@ -5,20 +5,26 @@ set nocompatible              " be iMproved, required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-Plug 'psliwka/vim-smoothie'
-Plug 'preservim/nerdtree'
+" Themes
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-Plug 'fatih/vim-go'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-
 Plug 'altercation/vim-colors-solarized'
+
+" Tools
+Plug 'psliwka/vim-smoothie'
+Plug 'preservim/nerdtree'
 Plug 'kshenoy/vim-signature'
+
+" Fuzzy Finder
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/LeaderF' 
 
+" Code Navigation
+Plug 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags' 
+
+" Plug 'fatih/vim-go'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,9 +104,6 @@ set shiftwidth=4
 " " 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Variables
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nu
 set background=dark
 colorscheme gruvbox
@@ -121,7 +124,7 @@ set nofoldenable
 set nowrap
 set incsearch
 set splitright
-set tags=tags;/
+set tags=./tags;/
 
 let g:go_doc_keywordprg_enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
