@@ -163,6 +163,7 @@ nnoremap W <C-w>w
 nnoremap <leader>n :vsplit 
 nnoremap <leader>c <C-w>c
 nnoremap <C-f> <C-w>v<C-]>zz
+nnoremap <leader><C-f> <C-w>w<C-w>c<C-w>v<C-]>zz<C-w>W
 nnoremap <leader>m <C-w>\|
 nnoremap <leader>l <C-w>=
 unlet mapleader
