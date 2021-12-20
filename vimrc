@@ -184,5 +184,7 @@ nnoremap ts :vsplit
 autocmd FileType help  setlocal number
 nnoremap th :tab help 
 nnoremap <leader><C-f> <C-w>v<C-]><C-w>Tzz
+nnoremap <Leader>tn :tnext<CR>
+nnoremap <Leader>tp :tprevious<CR>
 unlet mapleader
 
