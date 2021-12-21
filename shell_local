@@ -76,6 +76,9 @@ function unsetproxy() {
 	export no_proxy=
 }
 
+alias proxychains='proxychains -q'
+alias pro=proxychains
+
 ##############################################
 # => Common Commands
 ##############################################
