@@ -188,9 +188,9 @@ set shortmess-=S
 " => For programming
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=' '
-nnoremap <leader><C-f> 		:GoDef<CR>
-nnoremap <Leader>tt 	:TagbarToggle<CR> 
-nnoremap <leader>c 	:LeaderfBufTag<CR>
+nnoremap <leader><C-f> 	:GoDef<CR>
+nnoremap <Leader>tt    	:TagbarToggle<CR> 
+nnoremap <leader>c 	    :LeaderfBufTag<CR>
 " nnoremap <leader>c 	:Leaderf function --nowrap<CR>
 " nnoremap <leader>v 	:LeaderfBufTagAll<CR>
 
