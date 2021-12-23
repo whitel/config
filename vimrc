@@ -74,6 +74,31 @@ let g:tagbar_type_cpp = {
 \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => LeaderF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_theme='luna'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Gutentags
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let gutentags only work for matched .root_project
+let g:gutentags_add_default_project_roots = 0
+let g:gutentags_project_root = ['.root_project']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-go
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:go_doc_keywordprg_enabled = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
@@ -90,79 +115,6 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 let NERDTreeAutoDeleteBuffer=1
 unlet mapleader
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Variables
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 自适应不同语言的智能缩进
-filetype indent on
-" " 将制表符扩展为空格
-set expandtab
-" " 设置编辑时制表符占用空格数
-set tabstop=4
-" " 设置格式化时制表符占用空格数
-set shiftwidth=4
-" " 让 vim 把连续数量的空格视为一个制表符
-set softtabstop=4
-
-set nu
-set background=dark
-colorscheme gruvbox
-set hlsearch
-set cursorline
-set cursorcolumn
-syntax enable
-syntax on
-set t_Co=256
-
-let g:airline_theme='luna'
-
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-
-set foldmethod=syntax
-set nofoldenable
-set nowrap
-set incsearch
-set splitright
-set tags=./tags;/
-set showcmd
-
-" good airline
-let g:go_doc_keywordprg_enabled = 0
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#whitespace#mixed_indent_algo = 2
-
-" gutentags only work for matched .root_project
-let g:gutentags_add_default_project_roots = 0
-let g:gutentags_project_root = ['.root_project']
-
-" show match count
-set shortmess-=S
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let mapleader=' '
-nnoremap <leader><C-f> 		:GoDef<CR>
-nnoremap <Leader>tt 	:TagbarToggle<CR> 
-nnoremap <leader>c 	:LeaderfBufTag<CR>
-" nnoremap <leader>c 	:Leaderf function --nowrap<CR>
-" nnoremap <leader>v 	:LeaderfBufTagAll<CR>
-
-nnoremap <C-L> 20zl
-nnoremap <C-H> 20zh
-
-nnoremap <leader>J J
-
-inoremap <C-j> <down>
-inoremap <C-k> <up>
-inoremap <C-h> <left>
-inoremap <C-l> <right>
-
-unlet mapleader
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => window
@@ -196,8 +148,63 @@ nnoremap <Leader>tp :tprevious<CR>
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Variables
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 自适应不同语言的智能缩进
+filetype indent on
+" 将制表符扩展为空格
+set expandtab
+" 设置编辑时制表符占用空格数
+set tabstop=4
+" 设置格式化时制表符占用空格数
+set shiftwidth=4
+" 让 vim 把连续数量的空格视为一个制表符
+set softtabstop=4
+
+" 设置vim主题
+set background=dark
+colorscheme gruvbox
+
+set number
+set hlsearch
+set incsearch
+set cursorline
+set cursorcolumn
+syntax enable
+syntax on
+set t_Co=256
+
+set foldmethod=syntax
+set nofoldenable
+set nowrap
+set splitright
+set tags=./tags;/
+set showcmd
+
+" show match count
+set shortmess-=S
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For programming
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=' '
+nnoremap <leader><C-f> 		:GoDef<CR>
+nnoremap <Leader>tt 	:TagbarToggle<CR> 
+nnoremap <leader>c 	:LeaderfBufTag<CR>
+" nnoremap <leader>c 	:Leaderf function --nowrap<CR>
+" nnoremap <leader>v 	:LeaderfBufTagAll<CR>
+
+nnoremap <C-L> 20zl
+nnoremap <C-H> 20zh
+
+nnoremap <leader>J J
+unlet mapleader
+
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+inoremap <C-h> <left>
+inoremap <C-l> <right>
+
 inoremap { {}<Left>
 inoremap {<CR> {<CR>}<Esc>O
 inoremap {{ {
@@ -215,13 +222,10 @@ autocmd Filetype cpp inoremap <> <>
 autocmd Filetype cpp inoremap " ""<left>
 autocmd Filetype c inoremap " ""<left>
 
-inoremap <C-h> <left>
-inoremap <C-l> <right>
-inoremap <C-k> <up>
-inoremap <C-j> <down>
-
 inoremap jk <esc>
 vnoremap jk <esc>
+
+inoremap <esc> <nop>
 
 augroup numbertoggle
     autocmd!
