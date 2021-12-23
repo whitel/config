@@ -165,26 +165,6 @@ unlet mapleader
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => For programming
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap { {}<Left>
-inoremap {<CR> {<CR>}<Esc>O
-inoremap {{ {
-inoremap {} {}
-
-inoremap ( ()<left>
-inoremap (( (
-inoremap () ()
-
-autocmd Filetype cpp inoremap < <><left>
-autocmd Filetype cpp inoremap << <<
-autocmd Filetype cpp inoremap >> >>
-autocmd Filetype cpp inoremap <> <>
-
-autocmd Filetype cpp inoremap " ""<left>
-autocmd Filetype c inoremap " ""<left>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => window
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=','
@@ -215,10 +195,25 @@ nnoremap <Leader>tn :tnext<CR>
 nnoremap <Leader>tp :tprevious<CR>
 unlet mapleader
 
-" let g:solarized_termcolors=256
-" syntax enable
-" set background=dark
-" colorscheme solarized
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => For programming
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap {{ {
+inoremap {} {}
+
+inoremap ( ()<left>
+inoremap (( (
+inoremap () ()
+
+autocmd Filetype cpp inoremap < <><left>
+autocmd Filetype cpp inoremap << <<
+autocmd Filetype cpp inoremap >> >>
+autocmd Filetype cpp inoremap <> <>
+
+autocmd Filetype cpp inoremap " ""<left>
+autocmd Filetype c inoremap " ""<left>
 
 inoremap <C-h> <left>
 inoremap <C-l> <right>
