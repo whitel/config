@@ -126,6 +126,7 @@ set nowrap
 set incsearch
 set splitright
 set tags=./tags;/
+set showcmd
 
 " good airline
 let g:go_doc_keywordprg_enabled = 0
@@ -161,6 +162,27 @@ inoremap <C-h> <left>
 inoremap <C-l> <right>
 
 unlet mapleader
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => For programming
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap {{ {
+inoremap {} {}
+
+inoremap ( ()<left>
+inoremap (( (
+inoremap () ()
+
+autocmd Filetype cpp inoremap < <><left>
+autocmd Filetype cpp inoremap << <<
+autocmd Filetype cpp inoremap >> >>
+autocmd Filetype cpp inoremap <> <>
+
+autocmd Filetype cpp inoremap " ""<left>
+autocmd Filetype c inoremap " ""<left>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => window
