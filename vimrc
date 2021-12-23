@@ -24,6 +24,7 @@ Plug 'Yggdroot/LeaderF'
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags' 
 
+Plug 'voldikss/vim-floaterm'
 " Plug 'fatih/vim-go'
 call plug#end()
 
@@ -144,10 +145,9 @@ set shortmess-=S
 
 let mapleader=' '
 nnoremap <leader><C-f> 		:GoDef<CR>
-nnoremap <Leader>x 	:TagbarToggle<CR> 
-" nnoremap <leader>z 	:NERDTreeToggle<CR>
-" nnoremap <leader>c 	:Leaderf function --nowrap<CR>
+nnoremap <Leader>tt 	:TagbarToggle<CR> 
 nnoremap <leader>c 	:LeaderfBufTag<CR>
+" nnoremap <leader>c 	:Leaderf function --nowrap<CR>
 " nnoremap <leader>v 	:LeaderfBufTagAll<CR>
 
 nnoremap <C-L> 20zl
@@ -193,3 +193,21 @@ nnoremap <Leader>tn :tnext<CR>
 nnoremap <Leader>tp :tprevious<CR>
 unlet mapleader
 
+" let g:solarized_termcolors=256
+" syntax enable
+" set background=dark
+" colorscheme solarized
+
+inoremap <C-h> <left>
+inoremap <C-l> <right>
+inoremap <C-k> <up>
+inoremap <C-j> <down>
+
+inoremap jk <esc>
+vnoremap jk <esc>
+
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set rnu
+    autocmd BufLeave,FocusLost,InsertEnter * set nornu
+augroup END
