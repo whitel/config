@@ -29,7 +29,7 @@ Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => tagbar
+" => Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边 
 let tagbar_left=1 
@@ -81,10 +81,13 @@ let g:Lf_PreviewInPopup = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme='luna'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#gutentags#enabled = 1
+let g:airline_powerline_fonts = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Gutentags
@@ -117,7 +120,7 @@ let NERDTreeAutoDeleteBuffer=1
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => window
+" => Window
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=','
 nnoremap Q <C-w>W
@@ -131,7 +134,7 @@ nnoremap <leader>l <C-w>=
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => tab
+" => Tab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=' '
 nnoremap J gT
@@ -148,7 +151,7 @@ nnoremap <Leader>tp :tprevious<CR>
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Variables
+" => Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 自适应不同语言的智能缩进
 filetype indent on
@@ -181,11 +184,16 @@ set splitright
 set tags=./tags;/
 set showcmd
 
+set ignorecase
+set smartcase
+set autoindent
+set encoding=utf-8
+
 " show match count
 set shortmess-=S
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => For programming
+" => Programming
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=' '
 nnoremap <leader><C-f> 	:GoDef<CR>
@@ -227,8 +235,11 @@ vnoremap jk <esc>
 
 inoremap <esc> <nop>
 
-augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set rnu
-    autocmd BufLeave,FocusLost,InsertEnter * set nornu
-augroup END
+" augroup numbertoggle
+"     autocmd!
+"     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+" augroup END
+
+set relativenumber
+nnoremap <space>r :set relativenumber!<CR>
