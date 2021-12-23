@@ -25,6 +25,7 @@ Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags' 
 
 Plug 'voldikss/vim-floaterm'
+Plug 'easymotion/vim-easymotion'
 " Plug 'fatih/vim-go'
 call plug#end()
 
@@ -243,3 +244,6 @@ inoremap <esc> <nop>
 
 set relativenumber
 nnoremap <space>r :set relativenumber!<CR>
+
+map <space>w <Plug>(easymotion-w)
+map <space>f <Plug>(easymotion-f)
