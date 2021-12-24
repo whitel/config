@@ -2,6 +2,7 @@
 # => SSH Commands
 ##############################################
 alias sshcomputer='ssh computer'
+alias sshcom=sshcomputer
 alias sshdell='ssh dell@dell -p2222'
 alias sshnode9='ssh root@node9 -p2235'
 
