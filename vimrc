@@ -88,7 +88,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 1
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Gutentags
@@ -118,6 +118,8 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 let NERDTreeAutoDeleteBuffer=1
+let g:NERDTreeMapJumpFirstChild = 0
+let g:NERDTreeMapJumpLastChild = 0
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
