@@ -238,6 +238,7 @@ autocmd Filetype c inoremap " ""<left>
 inoremap jk <esc>
 vnoremap jk <esc>
 
+" 封印普通ESC
 inoremap <esc> <nop>
 
 " augroup numbertoggle
