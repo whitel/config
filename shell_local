@@ -82,11 +82,11 @@ alias pro=proxychains
 ##############################################
 # => Common Commands
 ##############################################
-function geo() {
-    ip=$1
-    curl https://freegeoip.app/json/${ip} -s | jq ".city,.country_name"
-    # https://tools.keycdn.com/geo?host=223.72.105.28
-}
+# function geo() {
+#     ip=$1
+#     curl https://freegeoip.app/json/${ip} -s | jq ".city,.country_name"
+#     # https://tools.keycdn.com/geo?host=223.72.105.28
+# }
 
 alias cf="df -h | head -1 && df -h | grep mapper"
 
@@ -123,5 +123,3 @@ cd
 alias less='less -S'
 
 alias vim='nvim'
-
-alias geo='nali'
