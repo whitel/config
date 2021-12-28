@@ -247,7 +247,7 @@ inoremap <esc> <nop>
 "     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 " augroup END
 
-set relativenumber
+set norelativenumber
 nnoremap <space>r :set relativenumber!<CR>
 
 map <space>w <Plug>(easymotion-w)
