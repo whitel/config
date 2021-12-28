@@ -217,6 +217,7 @@ inoremap <C-j> <down>
 inoremap <C-k> <up>
 inoremap <C-h> <left>
 inoremap <C-l> <right>
+inoremap <C-o> <esc>o
 
 inoremap { {}<Left>
 inoremap {<CR> {<CR>}<Esc>O
