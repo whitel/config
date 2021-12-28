@@ -123,3 +123,5 @@ cd
 alias less='less -S'
 
 alias vim='nvim'
+
+alias geo='nali'
