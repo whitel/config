@@ -154,7 +154,7 @@ nnoremap <Leader>tp :tprevious<CR>
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Tab
+" => Folaterm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=' '
 nnoremap <leader>fm :FloatermToggle<CR>
