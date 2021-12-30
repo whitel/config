@@ -27,7 +27,7 @@ if [[ $option == "" ]]; then
 	echo "[v] Installing .vimrc .bashrc .gitconfig..."
 	ln -s ~/config/vimrc ~/.vimrc
 	ln -s ~/config/bashrc ~/.bashrc
-	ln -s ~/config/gitconfig ~/.gitconfig
+    cp ~/config/gitconfig ~/.gitconfig
 	cp ~/config/sshconfig ~/.ssh/config
 	ln -s ~/config/shell_local ~/.shell_local
 	ln -s ~/config/zshrc ~/.zshrc
