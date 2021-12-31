@@ -161,6 +161,12 @@ nnoremap <leader>fm :FloatermToggle<CR>
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Easymotion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map w <Plug>(easymotion-w)
+map f <Plug>(easymotion-f)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 自适应不同语言的智能缩进
@@ -258,5 +264,3 @@ inoremap <esc> <nop>
 set norelativenumber
 nnoremap <space>r :set relativenumber!<CR>
 
-map <space>w <Plug>(easymotion-w)
-map <space>f <Plug>(easymotion-f)
