@@ -163,8 +163,8 @@ unlet mapleader
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Easymotion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map w <Plug>(easymotion-w)
-map b <Plug>(easymotion-b)
+map <space>w <Plug>(easymotion-w)
+map <space>b <Plug>(easymotion-b)
 map f <Plug>(easymotion-f)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
