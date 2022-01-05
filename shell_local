@@ -39,6 +39,7 @@ alias gds='git diff --staged'
 # git others
 alias gclean='git clean -xdf'
 alias gr='git remote -v'
+alias gp='git push'
 
 ##############################################
 # => Docker commands
