@@ -26,6 +26,7 @@ Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'voldikss/vim-floaterm'
 Plug 'easymotion/vim-easymotion'
+Plug 'google/vim-searchindex'
 " Plug 'fatih/vim-go'
 call plug#end()
 
