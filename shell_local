@@ -131,3 +131,5 @@ cd
 alias less='less -R'
 
 alias vim='nvim'
+
+# test
