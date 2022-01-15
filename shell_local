@@ -6,6 +6,7 @@ alias sshdell='ssh dell@dell -p2222'
 alias sshnode9='ssh root@node9 -p2235'
 alias sshnode7='ssh root@node7'
 alias ssharchlinux='ssh archlinux'
+alias sshopenwrt='ssh root@192.168.1.1'
 
 ##############################################
 # => Git Commands
