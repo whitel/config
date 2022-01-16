@@ -42,7 +42,9 @@ alias gds='git diff --staged'
 alias gclean='git clean -xdf'
 alias gr='git remote -v'
 alias gp='git push'
-alias done='git commit -a -m "Update" && git push'
+function done() {
+    git add . --all && git commit -m 'Update' && git push
+}
 
 ##############################################
 # => Docker commands
