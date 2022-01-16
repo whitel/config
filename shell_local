@@ -129,7 +129,7 @@ alias sk=sshkali
 alias p='ssh -f -N -C -D 0.0.0.0:8000 conductor@computer -p 10022'
 cd
 
-alias less='less -SR'
+alias less='less -S'
 
 alias vim='nvim'
 
