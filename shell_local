@@ -42,7 +42,6 @@ alias gds='git diff --staged'
 alias gclean='git clean -xdf'
 alias gr='git remote -v'
 alias gp='git push'
-alias e='vim README.md'
 function now() {
     git add . --all && git commit -m 'Update' && git push
 }
