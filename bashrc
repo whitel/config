@@ -2,6 +2,10 @@ if [[ -f ~/.shell_local ]]; then
 	source ~/.shell_local
 fi
 
+if [[ -f ~/.local_machine ]]; then
+	source ~/.local_machine
+fi
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
