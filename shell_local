@@ -137,4 +137,4 @@ alias less='less -S -r'
 
 alias vim='nvim'
 
-# alias rsync='rsync --info=progress2 -avhP'
+# alias rsync='rsync -avhP'
