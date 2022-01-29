@@ -90,6 +90,11 @@ alias pro=proxychains
 ##############################################
 # => Common Commands
 ##############################################
+alias en="./env/bin/activate"
+
+##############################################
+# => Common Commands
+##############################################
 # function geo() {
 #     ip=$1
 #     curl https://freegeoip.app/json/${ip} -s | jq ".city,.country_name"
