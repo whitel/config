@@ -90,11 +90,13 @@ alias pro=proxychains
 ##############################################
 # => Python commands
 ##############################################
-if [[ -f "./env/bin/activate" ]]; then
-    alias en="source ./env/bin/activate"
-else
-    echo "invalid folder without python virtualenv"
-fi
+function en() {
+    if [[ -f "./.env/bin/activate" ]]; then
+        source ./.env/bin/activate
+    else
+        echo "invalid folder without python virtualenv"
+    fi
+}
 
 ##############################################
 # => Common Commands
