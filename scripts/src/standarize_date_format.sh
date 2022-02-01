@@ -7,7 +7,8 @@ usage () {
     echo "        sf        Print this page"
     echo "        sf dof    Format filename to Date Format"
     echo "        sf dod    Format folders name to Data Format"
-    echo "        sf undo   Unformat all filename from Date Format"
+    echo "        sf undof  Unformat all filename from Date Format"
+    echo "        sf undod  Unformat all folders from Date Format"
 }
 
 solve () {
