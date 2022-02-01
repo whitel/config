@@ -131,7 +131,7 @@ export LC_ALL=en_US.UTF-8
 alias sl='ls'
 alias dc='cd'
 alias less='less -S -r'
-alias cp='cp -rp'
+alias cp='cp -r --preserve=all'
 
 
 function gitdiff() {
