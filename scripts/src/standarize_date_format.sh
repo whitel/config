@@ -1,9 +1,7 @@
 #! /usr/bin/bash
 
-# work for files rather than directories
-
 usage () {
-    echo "standarize_date_format.sh: Format all files (except directories) in this directory to Date Format(2022-01-02_hello.md)"
+    echo "standarize_date_format.sh: Format all files (except directories) in this directory to Date Format(2022-01-02_hello.md) by their modify time"
     echo ""
     echo "Usage:"
     echo "        sf        Print this page"
