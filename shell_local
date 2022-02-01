@@ -122,6 +122,7 @@ alias t6='tree -L 6'
 alias mklist="make -qp | awk -F':' '/^[a-zA-Z0-9][^\$#\/\t=]*:([^=]|\$)/ {split(\$1,A,/ /);for(i in A)print A[i]}'"
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/.scripts/bin
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en

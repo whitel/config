@@ -22,6 +22,9 @@ if [[ $option == "" ]]; then
 	if [[ -f ~/.shell_local ]]; then
 		mv ~/.shell_local ~/.shell_local.backup
 	fi
+	if [[ -f ~/.scripts ]]; then
+		mv ~/.scripts ~/.scripts.backup
+	fi
 	echo "[v] Original files were moved to ~/.*.backup"
 
 	echo "[v] Installing .vimrc .bashrc .gitconfig..."
@@ -31,6 +34,7 @@ if [[ $option == "" ]]; then
 	cp ~/config/sshconfig ~/.ssh/config
 	ln -s ~/config/shell_local ~/.shell_local
 	ln -s ~/config/zshrc ~/.zshrc
+    ln -s ~/config/scripts ~/.scripts
 else
 	echo "[x] unknown command" \"$option\"
 	echo ""
