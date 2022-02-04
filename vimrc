@@ -257,7 +257,7 @@ inoremap jk <esc>
 vnoremap jk <esc>
 
 " 封印普通ESC
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 
 " augroup numbertoggle
 "     autocmd!
