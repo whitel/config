@@ -4,6 +4,8 @@ download_apt () {
     APT_NAME=$(ls | grep ${PAC_NAME} | grep ".deb$")
 
     dpkg-deb -xv ${APT_NAME} ${PAC_NAME} && rm ${APT_NAME}
+
+    cd ${PAT_NAME}
 }
 
 download_apt $@
