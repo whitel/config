@@ -149,4 +149,6 @@ alias p='ssh -f -N -C -D 0.0.0.0:8000 conductor@computer -p 10022'
 
 alias vim='nvim'
 
+alias jq='jq -C'
+
 # alias rsync='rsync --info=progress2 -avhP'
