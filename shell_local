@@ -151,4 +151,6 @@ alias vim='nvim'
 
 alias jq='jq -C'
 
+alias randwords='shuf -n10 /usr/share/dict/words'
+
 # alias rsync='rsync --info=progress2 -avhP'
