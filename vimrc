@@ -245,10 +245,10 @@ inoremap ( ()<left>
 inoremap (( (
 inoremap () ()
 
-autocmd Filetype cpp inoremap < <><left>
-autocmd Filetype cpp inoremap << <
-autocmd Filetype cpp inoremap >> >
-autocmd Filetype cpp inoremap <> <>
+" autocmd Filetype cpp inoremap < <><left>
+" autocmd Filetype cpp inoremap << <
+" autocmd Filetype cpp inoremap >> >
+" autocmd Filetype cpp inoremap <> <>
 
 autocmd Filetype cpp inoremap " ""<left>
 autocmd Filetype c inoremap " ""<left>
