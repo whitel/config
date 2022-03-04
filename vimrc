@@ -160,6 +160,8 @@ unlet mapleader
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=' '
 nnoremap <leader>fm :FloatermToggle<CR>
+nnoremap <leader>g  :FloatermNew bash<CR>
+" autocmd VimEnter * FloatermNew --silent bash
 unlet mapleader
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
