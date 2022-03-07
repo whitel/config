@@ -30,6 +30,7 @@ alias gl='git log'
 alias gla='git la'
 alias gls='git log --stat'
 alias glsn='git --no-pager log --stat'
+alias glh='git log --stat HEAD^'
 
 # git branch
 alias gb='git --no-pager branch'
