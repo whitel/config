@@ -154,4 +154,7 @@ alias jq='jq -C'
 
 alias randwords='shuf -n10 /usr/share/dict/words'
 
+alias incc='gcc -xc -E -v -'
+alias inccpp='gcc -xc++ -E -v -'
+
 # alias rsync='rsync --info=progress2 -avhP'
