@@ -239,12 +239,12 @@ inoremap <C-l> <right>
 inoremap <C-o> <esc>o
 
 inoremap { {}<Left>
-inoremap {<CR> {<CR>}<Esc>O
-inoremap {{ {
+" inoremap {<CR> {<CR>}<Esc>O
+" inoremap {{ {
 inoremap {} {}
 
 inoremap ( ()<left>
-inoremap (( (
+" inoremap (( (
 inoremap () ()
 
 " autocmd Filetype cpp inoremap < <><left>
