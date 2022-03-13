@@ -157,4 +157,6 @@ alias randwords='shuf -n10 /usr/share/dict/words'
 alias incc='gcc -xc -E -v -'
 alias inccpp='gcc -xc++ -E -v -'
 
+alias updatezsh='ALL_PROXY=socks5://172.17.0.2:7891 upgrade_oh_my_zsh'
+
 # alias rsync='rsync --info=progress2 -avhP'
