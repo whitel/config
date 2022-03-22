@@ -14,6 +14,6 @@ backup
 
 for (( c=1; c<=${CNT}; c++ ))
 do  
-    cp -r ~/projects/algorithm/code_template ./playground/problem0${c}
+    cp -r ~/projects/algorithm/code_template ~/playground/problem0${c}
 done
 
