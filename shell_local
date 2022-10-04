@@ -100,6 +100,22 @@ function en() {
 }
 
 ##############################################
+# => Archive Commands
+##############################################
+function pigzUnTar() {
+    FILENAME=$1
+    pigz -dc ${FILENAME} | pv -F %p%t%e%r%b | tar xf -
+}
+
+function pigzTar() {
+    TARGET=$1
+    tar --use-compress-program="pigz --best --recursive | pv -F %p%t%e%r%b" -cf ${TARGET}.tar.gz ${TARGET}
+}
+
+alias puntar=pigzUnTar
+alias ptar=pigzTar
+
+##############################################
 # => Common Commands
 ##############################################
 # function geo() {
@@ -161,4 +177,6 @@ alias updatezsh='ALL_PROXY=socks5://172.17.0.2:7891 upgrade_oh_my_zsh'
 
 export DISABLE_UPDATE_PROMPT=true
 
+# mount -t fuse.vmhgfs-fuse .host:/PhotoPrismData /mnt/PhotoPrismData
 # alias rsync='rsync --info=progress2 -avhP'
+
