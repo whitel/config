@@ -176,7 +176,9 @@ alias inccpp='gcc -xc++ -E -v -'
 alias updatezsh='ALL_PROXY=socks5://172.17.0.2:7891 upgrade_oh_my_zsh'
 
 export DISABLE_UPDATE_PROMPT=true
+export DISABLE_AUTO_UPDATE=true
 
 # mount -t fuse.vmhgfs-fuse .host:/PhotoPrismData /mnt/PhotoPrismData
 # alias rsync='rsync --info=progress2 -avhP'
 
+alias originhex="echo -n 'index.php' | od -A n -t x1 | sed 's/ *//g'"
