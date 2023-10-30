@@ -11,7 +11,7 @@
 ## 安装一个新的ubuntu
 
 ```
-apt update && apt install vim git tree zsh proxychains4 curl wget neovim openssh-server pigz pv
+apt update && apt install vim git tree zsh proxychains4 curl wget neovim openssh-server pigz pv docker.io
 ```
 
 ```
@@ -59,5 +59,7 @@ Environment="HTTP_PROXY=http://host:7890/"
 Environment="HTTPS_PROXY=http://host:7890/"
 Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
 EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 ```
 
