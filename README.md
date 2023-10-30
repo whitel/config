@@ -46,3 +46,18 @@ sudo mkdir /mnt/hgfs
 sudo vmghfs-fuse -o allow_other .host:/photoprism-data /mnt/hgfs
 ```
 
+
+
+## 给docker添加代理
+
+```
+sudo mkdir -p /etc/systemd/system/docker.service.d
+sudo touch /etc/systemd/system/docker.service.d/proxy.conf
+sudo cat > /etc/systemd/system/docker.service.d/proxy.conf << EOF
+[Service]
+Environment="HTTP_PROXY=http://host:7890/"
+Environment="HTTPS_PROXY=http://host:7890/"
+Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
+EOF
+```
+
