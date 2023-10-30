@@ -47,6 +47,7 @@ sudo vmghfs-fuse -o allow_other .host:/photoprism-data /mnt/hgfs
 ```
 
 ## docker安装后设置
+
 ```
 sudo usermod -aG docker $USER
 curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
@@ -67,5 +68,16 @@ EOF
 
 sudo systemctl daemon-reload
 sudo systemctl restart docker
+```
+
+
+
+## 恢复photoprism database
+
+```
+mkdir -p ./storage/backups/mysql
+cp photoprism-db.sql ./storage/backups/mysql
+wget https://dl.photoprism.app/docker/docker-compose.yml
+docker-compose exec photoprism photoprism restore -i -f
 ```
 
