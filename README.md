@@ -72,8 +72,12 @@ sudo systemctl restart docker
 
 
 
-## 恢复photoprism database
-
+## 恢复photoprism
+```
+wget https://dl.photoprism.app/docker/docker-compose.yml
+sed -i 's/- "\.\/storage:\/photoprism\/storage"/- "\~\/photoprism\/storage:\/photoprism\/storage"/g' docker-compose.yml
+sed -i 's/- \"\~\/Pictures:\/photoprism\/originals"/- \"\~\/photoprism\/origin:\/photoprism\/originals"/g' docker-compose.yml
+```
 ```
 mkdir -p ./storage/backups/mysql
 cp photoprism-db.sql ./storage/backups/mysql
