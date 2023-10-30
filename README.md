@@ -59,6 +59,7 @@ Environment="HTTP_PROXY=http://host:7890/"
 Environment="HTTPS_PROXY=http://host:7890/"
 Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
 EOF
+sudo usermod -aG docker $USER
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
