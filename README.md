@@ -37,3 +37,12 @@ install ohmyzsh
 install vmware tools
 ```
 
+
+
+## 如何挂载vmware共享文件夹
+
+```
+sudo mkdir /mnt/hgfs
+sudo vmghfs-fuse -o allow_other .host:/photoprism-data /mnt/hgfs
+```
+
