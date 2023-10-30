@@ -11,7 +11,7 @@
 ## 安装一个新的ubuntu
 
 ```
-apt update && apt install vim git tree zsh proxychains4 curl wget neovim openssh-server
+apt update && apt install vim git tree zsh proxychains4 curl wget neovim openssh-server pigz pv
 ```
 
 ```
