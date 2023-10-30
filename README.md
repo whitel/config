@@ -81,7 +81,6 @@ sed -i 's/- \"\~\/Pictures:\/photoprism\/originals"/- \"\~\/photoprism\/origin:\
 ```
 mkdir -p ./storage/backups/mysql
 cp photoprism-db.sql ./storage/backups/mysql
-wget https://dl.photoprism.app/docker/docker-compose.yml
 docker-compose exec photoprism photoprism restore -i -f
 ```
 
