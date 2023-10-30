@@ -46,7 +46,12 @@ sudo mkdir /mnt/hgfs
 sudo vmghfs-fuse -o allow_other .host:/photoprism-data /mnt/hgfs
 ```
 
-
+## docker安装后设置
+```
+sudo usermod -aG docker $USER
+curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+chmod a+x /usr/local/bin/docker-compose
+```
 
 ## 给docker添加代理
 
@@ -59,7 +64,7 @@ Environment="HTTP_PROXY=http://host:7890/"
 Environment="HTTPS_PROXY=http://host:7890/"
 Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
 EOF
-sudo usermod -aG docker $USER
+
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
