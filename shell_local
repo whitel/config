@@ -109,7 +109,7 @@ function pigzUnTar() {
 
 function pigzTar() {
     TARGET=$1
-    tar --use-compress-program="pigz --best --recursive | pv -F %p%t%e%r%b" -cf ${TARGET}.tar.gz ${TARGET}
+    tar --use-compress-program="pigz --fast --recursive | pv -F %p%t%e%r%b" -cf ${TARGET}.tar.gz ${TARGET}
 }
 
 alias puntar=pigzUnTar
