@@ -69,7 +69,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
-
++ 注意，这里的HTTPS_PROXY后面一定要是http://（而不是https://），否则会出错
 
 
 ## 恢复photoprism
